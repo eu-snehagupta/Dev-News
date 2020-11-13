@@ -14,17 +14,15 @@ public class ArticleController {
     private ArticleService articleService;
 
     @GetMapping("")
-    public List<Article> getAll(@RequestParam(required = false) Long topicId) {
+    public List<Article> getAll(@RequestParam(required = false) Long topicId, @RequestParam(required = false) String sort) {
         if (topicId != null) {
             return articleService.getAllByTopicId(topicId);
+        }
+        if (sort != null) {
+            return articleService.getAll_sort(sort);
         } else {
             return articleService.getAll();
         }
-    }
-
-    @GetMapping("/sort")
-    public List<Article> getAll(@RequestParam String sort) {
-        return articleService.getAll_sort(sort);
     }
 
     @GetMapping("/{id}")
