@@ -21,10 +21,7 @@ In this project is building the backend for a developer news site where users ca
 * Docker
 
 
-<<<<<<< HEAD
 ## Setup
-=======
-## Task 1 (Setup)
 
 Initialize a new Spring project using [Spring initializer](https://start.spring.io/). Use gradle and java 11. You'll also need to add the following dependencies:
 
@@ -34,19 +31,10 @@ Initialize a new Spring project using [Spring initializer](https://start.spring.
 
 Setup a PostgreSQL database and make sure that you have the correct configuration in `application.properties`.
 
-<<<<<<< HEAD
+
 ## Articles
 
 Article is the core entity in our project. 
-=======
-## Task 2 (Articles)
-
-Article is the core entity in our project. An article object will have the following fields:
-
-* `title` the title of the article (String).
-* `body` text body of the article (String).
-* `authorName` the name of the author who created the article (String).
-* Don't forget to add an `id` field as well to identify each article
 
 Example article (JSON):
 
@@ -59,10 +47,6 @@ Example article (JSON):
 }
 ```
 
-<<<<<<< HEAD
-=======
-Create a REST API for articles with the following specification:
-
 | HTTP Method | HTTP Path | Action |
 | ------------|-----------|--------|
 | `GET` |`/articles` | return all articles. |
@@ -71,20 +55,9 @@ Create a REST API for articles with the following specification:
 | `PUT` | `/articles` | update the given article.|
 | `DELETE` | `/articles` | delete the given article.|
 
-<<<<<<< HEAD
 ## Comments
 
 We want our visitors to be able to comment the different articles. Each article can have zero or more comments. 
-
-=======
-## Task 3 (Comments)
-
-We want our visitors to be able to comment the different articles. Each article can have zero or more comments. The comment object has the following fields:
-
-* `id`
-* `body` the comment text body (String)
-* `authorName` the name of the author of the comment
-* `article` Don't forget to add the appropriate relationship annotation to link comments and articles.
 
 Example comment
 
@@ -103,10 +76,6 @@ Example comment
 
 ```
 
-<<<<<<< HEAD
-=======
-Create a REST API for comments with the following specification:
-
 | HTTP Method | HTTP Path | Action |
 | ------------|-----------|--------|
 | `GET` |`/comments` | return all comments. |
@@ -115,20 +84,9 @@ Create a REST API for comments with the following specification:
 | `PUT` | `/comments` | update the given comment.|
 | `DELETE` | `/comments` | delete the given comment.|
 
-<<<<<<< HEAD
 ## Topics
 
 We want to categorize our articles by topics. Each topic can have many articles and each article can belong to many topics.
-=======
-## Task 4 (Topics)
-
-We want to categorize our articles by topics. Each topic can have many articles and each article can belong to many topics. A topic object will have the following fields:
-
-* `id`
-* `name` topic name (String)
-* Don't forget to add appropriate relationship annotations to `Article`.
-
-Create a REST API for topics with the following specification:
 
 | HTTP Method | HTTP Path | Action |
 | ------------|-----------|--------|
@@ -137,25 +95,11 @@ Create a REST API for topics with the following specification:
 | `POST`| `/topics` | create a new topic.|
 | `PUT` | `/topics` | update the given topic.|
 | `DELETE` | `/topics` | delete the given topic.|
-<<<<<<< HEAD
-| ------------|-----------|--------|
 | `GET` |`/articles?topicId={topicId}` | return all articles with the given `topicId`. |
 
 ## Reactions
 
 To make our application more interactive we might want to add the ability to add article and comment reactions (likes, dislikes, ...).
-=======
-
-Add a new endpoint to the `articles` API so that you can get articles by a specific topic id
-
-| HTTP Method | HTTP Path | Action |
-| ------------|-----------|--------|
-| `GET` |`/articles?topicId={topicId}` | return all articles with the given `topicId`. |
-
-## [Optional] Task 5 (Reactions)
-
-To make our application more interactive we might want to add the ability to add article and comment reactions (likes, dislikes, ...). How would you model this problem? What entities do you need? What relationships do you need to add? What API endpoints do you need to create? Think about these questions and try to write a design document and implement it.
-
 
 ## Usage
 Dev-News is the backend project build for a developer news site where users can create articles, comment them and post their reactions.
