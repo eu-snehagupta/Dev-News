@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this project is building the backend for a developer news site where users can create articles, comment them and post their reactions (likes, dislikes). No graphical user interface.
+This project is building the backend for a developer news site where users can create articles, comment them and post their reactions (likes, dislikes). No graphical user interface.
 
 ## Objectives
 
@@ -28,9 +28,6 @@ Initialize a new Spring project using [Spring initializer](https://start.spring.
 * Spring Web
 * Spring JPA
 * PostgreSQL Driver
-
-Setup a PostgreSQL database and make sure that you have the correct configuration in `application.properties`.
-
 
 ## Articles
 
